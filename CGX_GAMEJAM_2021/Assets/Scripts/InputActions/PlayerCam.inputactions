@@ -1,0 +1,79 @@
+{
+    "name": "PlayerCam",
+    "maps": [
+        {
+            "name": "Mouse",
+            "id": "33dd1298-de8f-42a7-ae8a-f8575acf4c7a",
+            "actions": [
+                {
+                    "name": "mousePos",
+                    "type": "PassThrough",
+                    "id": "944a6756-8756-479e-809f-d464db7dcf20",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "49f510c4-3d6c-45c1-b61b-f1c25057d982",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "mousePos",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "GamePad",
+            "id": "5225d694-a173-48d5-85f4-508cb2eab0e4",
+            "actions": [
+                {
+                    "name": "Left Stick",
+                    "type": "Value",
+                    "id": "0edd7185-301d-4d50-963e-b2f70e7df3c3",
+                    "expectedControlType": "Stick",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Right Stick",
+                    "type": "Value",
+                    "id": "8185ebfa-7578-4870-9476-68b52219bb06",
+                    "expectedControlType": "Stick",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "0d0d7f18-9af5-4c5d-bb2a-048469af2d7e",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Left Stick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c22ecbd7-fe44-4e8f-b669-2a0ac1557372",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Right Stick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
