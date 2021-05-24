@@ -4,34 +4,38 @@ using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
 {
-    public KeyCode interaction;
+    //public KeyCode interaction;
 
-    private Interactables interactable;
+    public Interactables interactable;
+    private PlayerInteract interact;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        interactable = null;   
+        interact = new PlayerInteract();
+        interact.Player_Input.Interaction.performed += ctx => InteractWithItem();
+
     }
 
+    
+
     // Update is called once per frame
-    void Update()
+    void InteractWithItem()
     {
-        if (Input.GetKeyDown(interaction))
-        {
             if (interactable)
             {
                 interactable.Interact();
-            }
+            ObjectiveManager.objectiveManager.CheckObjectives();
         }
+        
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnEnable()
     {
-        if (other.CompareTag("Interactable"))
-        {
-            interactable = other.gameObject.GetComponent<Interactables>();
-        }
-        else { interactable = null; }
+        interact.Player_Input.Enable();
+    }
+
+    private void OnDisable()
+    {
+        interact.Player_Input.Disable();
     }
 }
